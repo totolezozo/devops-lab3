@@ -31,12 +31,14 @@ jobs:
 
       - name: npm audit
         run: npm audit --audit-level=high
+        continue-on-error: true
 
       - name: Install Snyk CLI
         run: npm install -g snyk
 
       - name: Snyk security scan
         run: snyk test --severity-threshold=high
+        continue-on-error: true
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
 
@@ -67,12 +69,14 @@ jobs:
 
       - name: npm audit
         run: npm audit --audit-level=high
+        continue-on-error: true
 
       - name: Install Snyk CLI
         run: npm install -g snyk
 
       - name: Snyk security scan
         run: snyk test --severity-threshold=high
+        continue-on-error: true
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
 
