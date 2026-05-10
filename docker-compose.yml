@@ -1,11 +1,11 @@
 version: "3.8"
 services:
   backend:
-    image: khintervenant/ci-cd-testing-deploy:backend
+    image: ${DOCKERHUB_USERNAME}/devops-lab3-backend:latest
     ports:
       - "3001:3001"
 
   frontend:
-    image: khintervenant/ci-cd-testing-deploy:frontend
+    image: ${DOCKERHUB_USERNAME}/devops-lab3-frontend:latest
     ports:
       - "3000:3000"
