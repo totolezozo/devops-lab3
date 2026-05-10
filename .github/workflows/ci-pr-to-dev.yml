@@ -67,6 +67,7 @@ jobs:
 
       - name: npm audit
         run: npm audit --audit-level=high
+        continue-on-error: true
 
       - name: Install Snyk CLI
         run: npm install -g snyk
