@@ -6,6 +6,10 @@ require('dotenv').config()
 
 app.use(cors());
 
+app.get('/api/health', (req, res) => {
+  res.json({ status: 'ok' });
+});
+
 app.get('/api/message', (req, res) => {
   const envVariable = process.env.APP_SECRET_NAME;
   console.log(envVariable);
